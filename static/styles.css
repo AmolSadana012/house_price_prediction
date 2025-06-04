@@ -1,0 +1,372 @@
+:root {
+  --primary: #2c3e50;
+  --secondary: #0096c7;
+  --accent: #f39c12;
+  --background: linear-gradient(135deg, #f1f5f9, #ade8f4);
+  --white: #ffffff;
+  --gray-light: #dce3ea;
+  --gray-dark: #4a4a4a;
+  --success: #2ecc71;
+  --error: #e74c3c;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--gray-dark);
+  margin: 0;
+  padding: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--secondary);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+
+.image-text {
+  position: absolute;
+  top: 30%;        /* Vertical center */
+  left: 50%;       /* Horizontal center */
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  /* background-color: rgba(0, 0, 0, 0.1); 
+  /* Black with 50% transparency */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.blurred-image {
+  filter: blur(3px);
+}  
+
+.container {
+  max-width: 1020px;
+  margin: 60px auto;
+  padding: 40px;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  padding-bottom: 80px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 32px;
+  color: var(--primary);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--primary);
+}
+
+.input-group input {
+  padding: 12px;
+  border: 1px solid var(--gray-light);
+  border-radius: 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: var(--secondary);
+  outline: none;
+}
+
+.checkbox-group {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  border: 1px solid var(--gray-light);
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f9fcff;
+}
+
+.checkbox-group legend {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.checkbox-group label {
+  display: inline-block;
+  margin: 8px 20px 8px 0;
+  font-size: 15px;
+  color: var(--gray-dark);
+}
+
+button[type="submit"] {
+  grid-column: 1 / -1;
+  padding: 14px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary);
+}
+
+.result {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #eaf6fb;
+  border-left: 6px solid var(--primary);
+  border-radius: 10px;
+  grid-column: 1 / -1;
+}
+
+.result h2 {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.gallery {
+  margin-top: 40px;
+  text-align: center;
+  
+}
+
+.gallery h2 {
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.gallery-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-images img {
+  width: 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Header Styling */
+.site-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #1d3557;
+padding: 20px 40px;
+color: white;
+position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+/* Logo Styling */
+.site-header .logo {
+font-size: 24px;
+font-weight: bold;
+margin-right: auto; /* This will push the logo to the left */
+}
+
+/* Navbar Styling */
+.navbar {
+display: flex;
+align-items: center;
+gap: 20px;  /* This will space out the links */
+}
+
+/* Navbar Links Styling */
+.navbar a {
+color: white;
+text-decoration: none;
+font-size: 16px;
+}
+
+.navbar a:hover {
+text-decoration: underline;
+}
+
+#logout {
+  display: inline-block; /* Make it behave like a button */
+  /* display: flex; */
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  box-shadow: none;
+  color: white;
+  text-decoration: none;
+}
+
+#logout a {
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: white;
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  /* transition: background-color 0.3s ease; */
+  margin-right: 20px;
+}
+
+#logout a:hover {
+  background-color: white;
+}
+
+/* Search Bar Styling (Dropdown) */
+.search-dropdown {
+display: flex;
+align-items: center;
+gap: 20px;
+padding-left: 20px;
+}
+
+.search-dropdown select,
+.search-dropdown button {
+padding: 6px 12px;
+font-size: 14px;
+border-radius: 4px;
+}
+
+.search-dropdown button {
+background-color: #007BFF;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.search-dropdown button:hover {
+background-color: #0056b3;
+}
+
+
+/* Footer Styling */
+.site-footer {
+background-color: #1d3557;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+
+.footer-links {
+margin-top: 10px;
+}
+
+.footer-links a {
+color: #caf0f8;
+margin: 0 10px;
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
+
+.footer-contact1 p {
+margin: 5px 0;
+color: white;
+text-align: left;
+margin-left: 190px;
+}
+
+.footer-contact1 h4{
+text-align: left;
+margin-left: 190px;
+}
+
+.footer-contact2 p {
+margin: 5px 0;
+color: white;
+text-align: left;
+margin-left: 190px;
+}
+
+.footer-contact2 h4{
+text-align: left;
+margin-left: 190px;
+}
+
+.footer-contact2 a {
+color: #007BFF;
+text-decoration: none;
+}
+
+.footer-contact2 a:hover {
+text-decoration: underline;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-between;  /* Distribute space between the sections */
+margin-bottom: 20px;
+}
+
+/* Styling individual sections */
+.footer-contact1, .footer-contact2 {
+flex: 1;  /* This ensures both sections take equal space */
+padding: 0 20px;  /* Adds some spacing between the sections */
+}
+
+/* Grid layout */
+.footer-content {
+display: grid;
+grid-template-columns: 1fr 1fr; /* two equal columns */
+gap: 40px;
+padding: 0 60px;
+}
+
+.hero-image {
+padding-top: 9x;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+#predict-section{
+width: 1100px;
+margin: 0 auto; /* centers the container */
+padding: 1px;
+padding-bottom: 20px;
+/* padding-top: 10px; */
+margin-top: 30px;
+background-color: #F1EFEC;
+}
+
+

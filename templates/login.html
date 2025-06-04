@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="static\login.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <h1 class="site-title">HousePredict</h1>
+        <div class="login-container">
+            <h2>Login</h2>
+            {% if error %}
+                <p style="color:red;">{{ error }}</p>
+            {% endif %}
+            <form method="POST">
+                <label>Username</label>
+                <input type="text" name="username" required>
+                <label>Password</label>
+                <input type="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        &copy; 2025 HousePredictsite. All rights reserved.
+    </footer>
+</body>
+</html>

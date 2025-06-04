@@ -1,0 +1,83 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color:#0096c7; */
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    background: linear-gradient(135deg, #f1f5f9, #ade8f4);
+}
+
+/* Header Styling */
+.site-header {
+    background-color: #1d3557;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.container img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    width: 600px;
+    height: 450.028px;
+    object-fit: cover; /* Ensures image maintains aspect ratio by cropping */
+    margin-top: 20px;
+}
+
+/* Details Text */
+.container p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Footer Styling */
+.site-footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1d3557;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: white;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ house.title }}</title>
+    <link rel="stylesheet" href="/static/house_detail.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">HousePredict</div>
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}">Home</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>{{ house.title }}</h1>
+        <img src="{{ url_for('static', filename=house.image.split('static/')[1]) }}" alt="{{ house.title }}" style="width: 100%; max-width: 600px;">
+        <p>{{ house.details | safe }}</p>
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 HousePredictsite. All rights reserved.</p>
+    </footer>
+</body>
+</html>
